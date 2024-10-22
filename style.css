@@ -1,4 +1,3 @@
-/* Reset and global styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,116 +5,261 @@
 }
 
 body {
-  font-family: 'Consolas', 'Courier New', monospace;
-  background-color: #252526;
-}
-
-/* Header styling */
-.header {
-  width: 100%;
-  background-color: #1e1e1e;
-  padding: 0 20px;
-}
-
-header .logo {
-  display: table;
   height: 100%;
-  float: left;
+  font-family: 'Consolas', 'Courier New', monospace;
 }
 
-header .logo img {
-  height: 20px;
-  margin-top: 5px;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 3px 15px;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 22px;
   margin-right: 20px;
-  margin-left: -5px;
+  vertical-align: middle;
 }
 
 .header nav {
   display: flex;
-  justify-content: start;
-  height: 30px;
-  align-items: center;
-  padding-left: 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-grow: 1;
+  justify-content: flex-start;
 }
 
 .header ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 20px;
+  flex-grow: 1;
+  flex-wrap: wrap; /* Allow the menu items to wrap if needed */
+  min-width: 0; /* Allow menu items to shrink if needed */
 }
 
 .header li {
   color: #c5c5c5;
+  white-space: nowrap; /* Prevent text wrapping in navigation items */
 }
 
-.header span {
-  font-size: 14px;
-  display: inline-block;
-  line-height: 30px;
+/* Center Anthony Doan in the middle of the header */
+.user-info {
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+  min-width: 0; /* Ensure it can shrink if necessary */
 }
 
-/* Sidebar styling */
-.container {
+.content {
   display: flex;
-  align-items: flex-start;
-  height: 100vh;
-  width: 20rem;
-  overflow: hidden;
+  flex-direction: row;
+  flex: 1;
 }
 
-.sidebar {
-  height: 100vh;
-  overflow-y: auto;
-  padding: 1.5rem;
-  border-right: 1px solid #3c3c3c;
-}
-
-.left-sidebar {
+.icon-sidebar {
   width: 3.5rem;
   background-color: #1a1919;
+  border-right: 1px solid #2e2d2d;
+  display: flex;
+  justify-content: center;
 }
 
-.left-sidebar ul {
+.icon-sidebar ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
 }
 
-.left-sidebar ul li {
-  color: #D4D4D4;
+.icon-sidebar ul li {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
-  stroke: #C5C5C5;
-  cursor: pointer;
+  width: 32px;
+  height: 35px;
+  transition: fill 0.3s ease;
 }
 
-.icon:hover {
-  stroke: #9CDCFE;
+.icon:hover path {
+  fill: #D3D3D3;
 }
 
-/* Right Sidebar styling */
-.right-sidebar {
-  flex-grow: 1;
+.page-sidebar {
+  width: 15rem;
   background-color: #181818;
+  border-right: 1px solid #2e2d2d;
 }
 
-.right-sidebar h2 {
-  color: #C5C5C5;
+.page-sidebar h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #c5c5c5;
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 5px;
 }
 
-.right-sidebar ul {
+.page-sidebar h2 .icon-left {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.page-sidebar ul {
   list-style: none;
 }
 
-.right-sidebar ul li a {
-  color: #D4D4D4;
-  text-decoration: none;
+.page-sidebar ul li {
+  margin-bottom: 3px;
+  padding-left: 7px;
+  font-weight: 300;
 }
 
-.right-sidebar ul li a:hover {
+.page-sidebar ul li a img.icon-left {
+  margin-right: 2px; /* Adjust this to reduce the gap, you can try 2px or 3px */
+  vertical-align: middle; /* Align the icon with the text vertically */
+  width: 15px; /* Adjust the size of the icons as necessary */
+  height: 15px; /* Keep the icon size consistent */
+}
+
+.page-sidebar ul li a {
+  display: flex; /* Use flexbox to align the icon and text on the same line */
+  align-items: center; /* Align the icon and text vertically */
+  padding: 8px 0 8px 12px; /* Adjust the padding to control the space between the icon and the sidebar edge */
+}
+
+.page-sidebar ul li a {
+  display: inline-flex;
+  align-items: center;
+  color: #D4D4D4;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.page-sidebar ul li a:hover {
   color: #9CDCFE;
 }
+
+.main-content {
+  flex-grow: 1;
+  background-color: #1e1e1e;
+  color: #c5c5c5;
+}
+
+
+.icon-left {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+  vertical-align: middle;
+}
+
+.tab-buttons {
+  display: flex; /* Use flexbox for a single-row layout */
+  flex-wrap: nowrap; /* Prevent wrapping to multiple rows */
+  justify-content: flex-start; /* Align buttons to the left */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.tablink {
+  background-color: #181818;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 13.5px;
+  height: 2.25rem;
+  width: 8rem;
+  padding-top: 6px;
+  flex-shrink: 1; /* Allow the buttons to shrink if necessary */
+  border-right: .5px solid #292727;
+  justify-content: flex-start; 
+}
+
+.tablink.active {
+  background-color: #1e1e1e;
+  border-top: 2px solid #007acc; /* Blue line on active tab */
+}
+
+.tablink img {
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+  margin-left: 50;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
+  border-top: 1px solid #333;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.filler-box {
+  background-color: #181818;
+  flex-grow: 1;
+}
+
+/* Active state for sidebar links *
+
+/* Active state for sidebar links */
+/* Active state for sidebar links */
+/* Active state for sidebar links */
+.page-sidebar ul li a.active {
+  color: white;  /* White text color */
+  border-left: 4px solid #007acc;  /* Thick blue left border for active state */
+  padding: 10px 0 10px 12px;  /* Fill the entire row */
+  width: 100%;  /* Ensure the link spans the full width of the container */
+  display: block;  /* Block-level element to fill the row */
+  box-sizing: border-box;  /* Include padding and border in the element's width */
+  transition: background-color 0.5s, border-left 0.5s; /* Smooth transition for color change */
+}
+
+/* Styling for inactive links */
+.page-sidebar ul li a {
+  background-color: transparent; /* No background for inactive links */
+  color: #cccccc;  /* Light text for inactive links */
+  padding: 10px 0 10px 12px;  /* Padding to ensure the text aligns properly */
+  width: 100%;  /* Ensure the link spans the full width of the container */
+  display: block;  /* Block-level element to fill the row */
+  border-left: 4px solid transparent; /* No border for inactive links */
+  box-sizing: border-box;  /* Include padding and border in the element's width */
+  transition: background-color 0.5s, border-left 0.5s; /* Smooth transition */
+}
+
+/* Hover effect for sidebar links */
+.page-sidebar ul li a:hover {
+  background-color: #333333; /* Slight hover effect */
+  color: white;  /* Change text to white on hover */
+}
+
