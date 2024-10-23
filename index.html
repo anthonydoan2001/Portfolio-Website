@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
+  <title>Anthony Doan</title>
+  <!-- Link to your CSS file -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <div class="container">
     <!-- Header -->
     <header class="header">
       <div class="logo">
-        <li>
-          <img src="./vscode.svg" class="logo">
-        </li>
+        <img src="./Assets/vscode.svg" alt="VSCode Logo" class="logo">
       </div>
       <nav>
         <ul>
@@ -36,76 +36,363 @@
       <div class="sidebar icon-sidebar">
         <ul>
           <li>
-            <svg class="icon" width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="#808080"/>
-            </svg>
           </li>
         </ul>
       </div>
 
       <!-- (Page Sidebar) -->
       <div class="sidebar page-sidebar">
-        <h2><img src="./down.svg" alt="Portfolio Icon" class="icon-left"> PORTFOLIO</h2>
+        <h2><img src="./Assets/down.svg" alt="Portfolio Icon" class="icon-left"> PORTFOLIO</h2>
         <ul>
-          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('home.jsx', this)"><img src="./react.svg" alt="Home Icon" class="icon-left"> home.jsx</a></li>
-          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('about.css', this)"><img src="./css.svg" alt="About Icon" class="icon-left"> about.css</a></li>
-          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('contact.js', this)"><img src="./javascript.svg" alt="Contact Icon" class="icon-left"> contact.js</a></li>
-          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('skills.py', this)"><img src="./python.svg" alt="Skills Icon" class="icon-left"> skills.py</a></li>
-          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('projects.html', this)"><img src="./html.svg" alt="Projects Icon" class="icon-left"> projects.html</a></li>
-          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('github.sql', this)"><img src="./sql.svg" alt="Github Icon" class="icon-left"> github.sql</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('home.jsx', this)"><img src="./Assets/react.svg" alt="Home Icon" class="icon-left"> home.jsx</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('about.css', this)"><img src="./Assets/css.svg" alt="About Icon" class="icon-left"> about.css</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('contact.js', this)"><img src="./Assets/javascript.svg" alt="Contact Icon" class="icon-left"> contact.js</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('skills.py', this)"><img src="./Assets/python.svg" alt="Skills Icon" class="icon-left"> skills.py</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('projects.html', this)"><img src="./Assets/html.svg" alt="Projects Icon" class="icon-left"> projects.html</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('github.sql', this)"><img src="./Assets/sql.svg" alt="Github Icon" class="icon-left"> github.sql</a></li>
+          <li><a href="javascript:void(0);" onclick="openFileFromSidebar('resume.pdf', this)"><img src="./Assets/pdf.svg" alt="PDF Icon" class="icon-left"> resume.pdf</a></li>
         </ul>
       </div>
 
       <!-- Main Content Area -->
       <div class="main-content">
         <div class="tab-buttons">
-            <button class="tablink active" onclick="openFileFromTab('home.jsx', this)" id="defaultOpen">
-                <img src="./react.svg" alt="Home Icon" class="icon-left"> home.jsx
-            </button>
-            <button class="tablink" onclick="openFileFromTab('about.css', this)">
-                <img src="./css.svg" alt="About Icon" class="icon-left"> about.css
-            </button>
-            <button class="tablink" onclick="openFileFromTab('contact.js', this)">
-                <img src="./javascript.svg" alt="Contact Icon" class="icon-left"> contact.js
-            </button>
-            <button class="tablink" onclick="openFileFromTab('skills.py', this)">
-                <img src="./python.svg" alt="Skills Icon" class="icon-left"> skills.py
-            </button>
-            <button class="tablink" onclick="openFileFromTab('projects.html', this)">
-                <img src="./html.svg" alt="Projects Icon" class="icon-left"> projects.html
-            </button>
-            <button class="tablink" onclick="openFileFromTab('github.sql', this)">
-                <img src="./sql.svg" alt="Github Icon" class="icon-left"> github.sql
-            </button>
-            <div class="filler-box"></div>
+          <button class="tablink active" onclick="openFileFromTab('home.jsx', this)" id="defaultOpen">
+            <img src="./Assets/react.svg" alt="Home Icon" class="icon-left"> home.jsx
+          </button>
+          <button class="tablink" onclick="openFileFromTab('about.css', this)">
+            <img src="./Assets/css.svg" alt="About Icon" class="icon-left"> about.css
+          </button>
+          <button class="tablink" onclick="openFileFromTab('contact.js', this)">
+            <img src="./Assets/javascript.svg" alt="Contact Icon" class="icon-left"> contact.js
+          </button>
+          <button class="tablink" onclick="openFileFromTab('skills.py', this)">
+            <img src="./Assets/python.svg" alt="Skills Icon" class="icon-left"> skills.py
+          </button>
+          <button class="tablink" onclick="openFileFromTab('projects.html', this)">
+            <img src="./Assets/html.svg" alt="Projects Icon" class="icon-left"> projects.html
+          </button>
+          <button class="tablink" onclick="openFileFromTab('github.sql', this)">
+            <img src="./Assets/sql.svg" alt="Github Icon" class="icon-left"> github.sql
+          </button>
+          <button class="tablink" onclick="openFileFromTab('resume.pdf', this)">
+            <img src="./Assets/pdf.svg" alt="PDF Icon" class="icon-left"> resume.pdf
+          </button>
+          <div class="filler-box"></div>
         </div>
-    
+
         <!-- Tab Content Sections -->
         <div class="tabcontent-container">
-            <div id="home.jsx" class="tabcontent active">
-                <h1>home.jsx</h1>
-                <p>London is the capital city of England.</p>
+          <div id="home.jsx" class="tabcontent active">
+            <div id="home">
+              <div class="text-container">
+                <h3>Anthony Doan</h3>
+                <p>Software Developer</p>
+                <div class="button-container">
+                  <button class="home-button" onclick="handleButtonClick('projects.html')">View Work</button>
+                  <button class="home-button-2" onclick="handleButtonClick('contact.js')">Contact Me</button>
+                </div>
+                <div class="button-container-2">
+                  <a href="resume.pdf" download="AnthonyDoan_Resume.pdf">
+                    <button class="home-button-3">Download My Resume</button>
+                  </a>
+                </div>
+              </div>
+              <img src="./Assets/pic.png" alt="Profile Image" class="profile-img">
             </div>
-            <div id="about.css" class="tabcontent">
-                <h1>about.css</h1>
-                <p>Paris is the capital of France.</p>
+          </div>
+
+          <div id="about.css" class="tabcontent">
+            <div class="about-container">
+              
+              <!-- Profile and Bio -->
+              <div class="profile-section">
+                <div class="profile">
+                  <img src="./Assets/pic.png" alt="Anthony Doan" class="profile-pic">
+                  <h2>Anthony Doan</h2>
+                  <p>Houston, TX</p>
+                  <div class="button-container">
+                    <button class="home-button-4" onclick="handleButtonClick('contact.js')">Contact Me</button>
+                  </div>
+                </div>
+                <div class="profile-bio">
+                  <h3>About</h3>
+                  <p>Hello! I'm Anthony Doan, a Software Developer based in Houston, Texas. I specialize in <span style="font-size: 18px; color: #4287f5;">full-stack applications</span>, machine learning models, and process automation. I'm passionate about solving complex problems and continuously learning new technologies.</p>
+                  <p>I hold a <span style="font-size: 18px; color: #4287f5;">Bachelor of Science in Computer Science</span> from the University of Houston, with a <span style="font-size: 18px; color: #4287f5;">minor in Mathematics</span>, providing me with a strong foundation in <span style="font-size: 18px; color: #4287f5;">algorithms, data structures, and database systems.</span></p>
+                  <p>At <span style="font-size: 18px; font-weight: bold;">Daikin Comfort</span>, I contributed to the development of a rebate processing system using IBM AS400 and SQL, reducing manual work and refining my skills in <span style="font-size: 18px; color: #4287f5;">database management and automation.</span></p>
+                  <p>My work approach is <span style="font-size: 18px; font-weight: bold;">Agile</span>, focusing on adaptability and collaboration. I also use a <span style="font-size: 18px; font-weight: bold;">problem-solving mindset</span> to break down challenges and implement efficient, data-driven solutions. I'm always eager to learn and incorporate the latest technologies in my projects.</p>
+                </div>
+              </div>
+              
+              <!-- Education -->
+              <h3>Education</h3>
+              <div class="education-section">
+                <div class="education-container">
+                  <div class="education-logo">
+                    <img src="./Assets/uh.png" alt="UH Logo" class="uh-logo">
+                  </div>
+                  <div class="education-bio">
+                    <h1 class="university-heading">University of Houston <span class="location">- Houston, TX</span></h1>
+                    <p>B.S. in Computer Science, Minor in Mathematics</p>
+                  </div>
+                  <div class="graduated">
+                    <p>May 2022 - September 2022</p>
+                  </div>
+                </div>
+
+                <div class="education-skills">
+                  <span class="skill-tag">C++</span>
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">Python</span>
+                  <span class="skill-tag">Database</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">HTML</span>
+                  <span class="skill-tag">CSS</span>
+                  <span class="skill-tag">R</span>
+                </div>
+                <div class="education-course">
+                  <span class="skill-tag">Data Structure and Algorithms</span>
+                  <span class="skill-tag">Software Engineering</span>
+                  <span class="skill-tag">Operating Systems</span>
+                  <span class="skill-tag">Data Science</span>
+                  <span class="skill-tag">Computer Networks</span>
+                  <span class="skill-tag">Database Systems</span>
+                </div>
+                
+              </div>
+
+
+              <h3>Professional Experience</h3>
+              <div class="experience-section">
+                <div class="experience-container">
+                  <div class="experience-logo">
+                    <img src="./Assets/d.svg" alt="d Logo" class="d-logo">
+                  </div>
+                  <div class="experience-bio">
+                    <h1 class="experience-heading">Information Technology Intern <span class="location">- Waller, TX</span></h1>
+                    <p>Daikin Comfort</p>
+                  </div>
+                  <div class="experience-duration">
+                    <p>Graduated: Spring 2024</p>
+                  </div>
+                </div>
+                <div class="experience-details">
+                  <div class="profile-bio">
+                    <p>During my internship at <span style="font-size: 17px; color: #4287f5;">Daikin Comfort</span>, I automated a rebate processing system, cutting down over 40 hours of manual work per week by designing an optimized database schema and developing complex <span style="font-size: 17px; color: #4287f5;">SQL stored procedures</span> for <span style="font-size: 17px; color: #4287f5;">efficient data retrieval</span>. I utilized <span style="font-size: 17px; color: #4287f5;">IBM AS400</span>, <span style="font-size: 17px; color: #4287f5;">JavaScript</span>, <span style="font-size: 17px; color: #4287f5;">Excel</span>, and <span style="font-size: 17px; color: #4287f5;">SQL</span> to achieve this.</p>
+                    <p>By analyzing the workflow, identifying bottlenecks, and creating a streamlined approach, I enhanced system performance, significantly boosting productivity and accuracy. This automation <span style="font-size: 17px; color: #4287f5;">reduced manual work by more than 40 hours per week</span> and demonstrated my skills in <span style="font-size: 17px; color: #4287f5;">data analysis</span> and <span style="font-size: 17px; color: #4287f5;">system optimization</span>.</p>
+                  </div>
+                </div>
+                
+                
+
+                <div class="experience-skills">
+                  <span class="skill-tag">SQL</span>
+                  <span class="skill-tag">Excel</span>
+                  <span class="skill-tag">Relational Database</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">IBM AS400</span>
+                  <span class="skill-tag">Tableau</span>
+                </div>
+              </div>
             </div>
-            <div id="contact.js" class="tabcontent">
-                <h1>contact.js</h1>
-                <p>Tokyo is the capital of Japan.</p>
+          </div>
+
+          <div id="contact.js" class="tabcontent">
+            <div class="contact-container">
+              <h1>Looking for <span style="font-size: 33px; color: #4287f5;">Software Engineering</span> or <span style="font-size: 33px; color: #4287f5;">Software Development</span> Opportunities</h1>
+              <p>Are you hiring for an exciting project or role in software engineering or development?<br>Let’s connect! Feel free to send me an email or reach out via instant message!</p>
+
+              <div class="contact-info">
+                <!-- Email -->
+                <div class="contact-icons">
+                  <img src="./Assets/email.svg" alt="Email Icon" width="40" height="40">
+                  <span class="contact-text">
+                    <a href="mailto:anthonydoanwork@gmail.com" target="_blank">anthonydoanwork@gmail.com</a>
+                  </span>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-icons">
+                  <img src="./Assets/phone.svg" alt="Phone Icon" width="40" height="40">
+                  <span class="contact-text">
+                    <a href="tel:+18322790182">(832)279-0182</a>
+                  </span>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="contact-icons">
+                  <img src="./Assets/linkedin.svg" alt="LinkedIn Icon" width="40" height="40">
+                  <span class="contact-text">
+                    <a href="https://www.linkedin.com/in/anthonyduydoan/" target="_blank">LinkedIn</a>
+                  </span>
+                </div>
+
+                <!-- GitHub -->
+                <div class="contact-icons">
+                  <img src="./Assets/github.svg" alt="GitHub Icon" width="40" height="40">
+                  <span class="contact-text">
+                    <a href="https://github.com/anthonydoan2001" target="_blank">GitHub</a>
+                  </span>
+                </div>
+              </div>
             </div>
-            <div id="skills.py" class="tabcontent">
-                <h1>skills.py</h1>
-                <p>Oslo is the capital of Norway.</p>
+          </div>
+
+          <div id="skills.py" class="tabcontent">
+            <div class="skills-container">
+              <div class="skills-section">
+                <h3>Languages</h3>
+                <div class="skills-grid">
+                  <div class="skill-item advanced">
+                    <img src="./Assets/python.svg" alt="Python">
+                    <span>Python</span>
+                  </div>
+                  <div class="skill-item advanced">
+                    <img src="./Assets/cpp.svg" alt="C++">
+                    <span>C++</span>
+                  </div>
+                  <div class="skill-item advanced">
+                    <img src="./Assets/sql.svg" alt="SQL">
+                    <span>SQL</span>
+                  </div>
+                  <div class="skill-item advanced">
+                    <img src="./Assets/javascript.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="skill-item advanced">
+                    <img src="./Assets/html.svg" alt="HTML">
+                    <span>HTML</span>
+                  </div>
+                  <div class="skill-item advanced">
+                    <img src="./Assets/css.svg" alt="CSS">
+                    <span>CSS</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/r.svg" alt="R">
+                    <span>R</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Frameworks & Libraries</h3>
+                <div class="skills-grid">
+                  <div class="skill-item advanced">
+                    <img src="./Assets/react.svg" alt="React.js">
+                    <span>React.js</span>
+                  </div>
+                  <div class="skill-item advanced">
+                    <img src="./Assets/nodejs.svg" alt="Node.js">
+                    <span>Node.js</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/dotnet.svg" alt=".NET">
+                    <span>.NET Framework</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/pandas.svg" alt="Pandas">
+                    <span>Pandas</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/numpy.svg" alt="NumPy">
+                    <span>NumPy</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/scikit-learn.svg" alt="Scikit-learn">
+                    <span>Scikit-learn</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/matplotlib.svg" alt="Matplotlib">
+                    <span>Matplotlib</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3>Tools & Technologies</h3>
+                <div class="skills-grid">
+                  <div class="skill-item advanced">
+                    <img src="./Assets/mysql.svg" alt="MySQL">
+                    <span>MySQL</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/jupyter.svg" alt="Jupyter">
+                    <span>Jupyter Notebook</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/github.svg" alt="GitHub">
+                    <span>GitHub</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/git.svg" alt="Git">
+                    <span>Git</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/vscode.svg" alt="VS Code">
+                    <span>VS Code</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/linux.svg" alt="Linux">
+                    <span>Linux</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/powerbi.svg" alt="Power BI">
+                    <span>Power BI</span>
+                  </div>
+                  <div class="skill-item">
+                    <img src="./Assets/tableau.svg" alt="Tableau">
+                    <span>Tableau</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div id="projects.html" class="tabcontent">
-                <h1>projects.html</h1>
-                <p>Oslo is the capital of Norway.</p>
+          </div>
+
+          <!-- Projects -->
+          <div id="projects.html" class="tabcontent">
+            <div class="projects-grid">    
+              <div class="project-card">
+                <img src="./Assets/port.PNG" alt="Portfolio Website">
+                <h3>Portfolio Website</h3>
+                <p>Personal portfolio website showcasing projects and skills. Built with HTML, CSS, and JavaScript.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <a href="#" class="project-link">View Details</a>
+              </div>
+              
+              <div class="project-card">
+                <img src="./Assets/data.jpg" alt="Data Analysis Tool">
+                <h3>Data Analysis Tool</h3>
+                <p>Python-based tool for analyzing large datasets. Implements various statistical methods and visualization techniques.</p>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Pandas</span>
+                  <span class="tag">Matplotlib</span>
+                </div>
+                <a href="#" class="project-link">View Details</a>
+              </div>
             </div>
-            <div id="github.sql" class="tabcontent">
-                <h1>github.sql</h1>
-                <p>Oslo is the capital of Norway.</p>
+          </div>
+
+          <div id="github.sql" class="tabcontent">
+            <div class="github-container">
+              <img src="./Assets/github.svg" alt="GitHub" class="github-icon-big">
+              <a href="https://github.com/anthonydoan2001" target="_blank" class="github-button">
+                <img src="./Assets/github.svg" alt="GitHub" class="github-icon">
+                View GitHub
+              </a>
             </div>
+          </div>
+
+          <div id="resume.pdf" class="tabcontent">
+            <!-- Embedded PDF viewer -->
+            <div class="pdf-viewer">
+              <iframe src="./Assets/resume.pdf#page=1" width="100%" height="800px" title="Anthony Doan Resume"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,4 +401,5 @@
   <!-- JavaScript for Sidebar and Tabs -->
   <script src="script.js"></script>
 </body>
+
 </html>
