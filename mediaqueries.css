@@ -1,0 +1,684 @@
+/* Global fixes */
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 68px);
+  overflow-y: auto;
+}
+
+/* Merged media queries */
+@media screen and (max-width: 1400px) {
+  #home {
+    min-height: calc(100vh - 68px);
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-container {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .profile-img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .tab {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header nav ul {
+    display: none;
+  }
+
+  #home, .section-container {
+    display: flex;
+    height: fit-content;
+    margin: 0 5%;
+    margin-left: -2rem;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .content {
+    flex-direction: column;
+    margin-left: 40px;
+  }
+
+  .icon-sidebar {
+    width: 30px;
+    height: 100vh;
+    position: fixed;
+  }
+
+  .page-sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 30px;
+    width: 100%;
+  }
+
+  .tab-buttons {
+    left: 30px;
+    max-height: 114px;
+  }
+
+  #home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 5%;
+    min-height: calc(100vh - 68px);
+    margin-left: -5rem;
+  }
+
+  #home h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+  }
+
+  #home p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .button-container, .button-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .home-button, .home-button-2, .home-button-3, .home-button-4, .home-button-5 {
+    width: 80%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .profile-img {
+    width: 200px;
+    margin-top: 2rem;
+    margin-left: 8rem;
+    border-radius: 50%;
+  }
+
+  .github-icon-big {
+    margin-top: 10rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  .github-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .education-section,
+  .experience-section,
+  .skills-container,
+  .projects-grid,
+  .contact-container {
+    margin-top: 5rem;
+    width: 95%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  .education-container,
+  .experience-container {
+    flex-direction: column;
+  }
+
+  .education-bio,
+  .graduated,
+  .experience-bio,
+  .experience-duration {
+    width: 100%;
+  }
+
+  .graduated,
+  .experience-duration {
+    margin-top: .5rem;
+  }
+
+  .tab-bar {
+    left: 30px;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  #contact {
+    padding: 25px;
+  }
+  .contact-heading .highlight {
+    font-size: 15px;
+  }
+
+  .contact-container {
+    margin: 30px;
+  }
+
+  .contact-container h1 {
+    margin-top: 6rem;
+    font-size: 13px;
+  }
+
+  .contact-container p {
+    margin-top: -1.5rem;
+    font-size: 10px;
+  }
+
+  .contact-icons {
+    font-size: 1rem;
+  }
+
+  .contact-icons img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-info {
+    font-size: 1.4rem;
+  }
+
+  .github-button {
+    padding: 25px 50px;
+    font-size: 28px;
+  }
+
+  .github-icon-big {
+    width: 350px;
+    height: 350px;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .profile {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 0 20px 0;
+  }
+
+  .profile-bio {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0;
+  }
+
+  .education-container {
+    flex-direction: column;
+  }
+
+  .education-bio, .graduated {
+    width: 100%;
+  }
+
+  .graduated {
+    align-items: flex-start;
+    font-size: 15px;
+  }
+
+  .resume-container {
+    width: 95%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume-section {
+    padding: 20px;
+  }
+
+  .resume-download-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  /* Adjust home section */
+  #home {
+    height: auto;
+    padding: 30px 5%;
+  }
+
+  #home h3 {
+    font-size: 2rem;
+  }
+
+  #home p {
+    font-size: 1.1rem;
+  }
+
+  /* Adjust profile image */
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Adjust tab content and buttons */
+  .tabcontent {
+    font-size: 1rem;
+  }
+
+  .tablink {
+    min-width: 100px;
+    font-size: 12px;
+  }
+
+  /* Adjust skills and projects grid */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    justify-items: flex-start;
+    margin-top: 6rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Adjust main content margin */
+  .main-content {
+    margin-top: 144px;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 1rem;
+  }
+
+  .skill-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-item span {
+    font-size: 0.9rem;
+  }
+
+  .main-content,
+  .section-container {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .skills-container {
+    margin-top: 80px; /* Increase this value to move the grid down */
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Increase gap for more space between items */
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Add padding to each skill item */
+  }
+
+  .skill-item img {
+    width: 50px; /* Increase icon size */
+    height: 50px;
+    margin-bottom: 10px; /* Add space between icon and text */
+  }
+
+  .skill-item span {
+    font-size: 0.9rem;
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 20px;
+    margin-top: 5rem;
+    width: 95%;
+    margin-bottom: 0;
+  }
+
+  .university-heading h1,
+  .experience-heading h1 {
+    font-size: 20px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .education-bio p,
+  .experience-bio p {
+    font-size: 16px;
+  }
+
+  .graduated h2,
+  .experience-duration h2 {
+    font-size: 18px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+  }
+
+  .d-logo {
+    display: none;
+  }
+
+  .education-skills,
+  .education-course,
+  .experience-skills {
+    gap: 10px;
+    margin-bottom: 20px; /* Add space below these sections */
+  }
+
+  .education-skills:last-child,
+  .education-course:last-child,
+  .experience-skills:last-child {
+    margin-bottom: 30px; /* Extra space for the last item */
+  }
+
+  .experience-container {
+    margin-bottom: 30px; /* Add space below the entire experience container */
+  }
+
+  .experience-details {
+    margin-bottom: 20px; /* Add space below the experience details */
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  /* Adjust header and logo */
+  .header {
+    padding: 5px;
+  }
+
+  .logo img {
+    height: 18px;
+  }
+
+  /* Adjust tab buttons */
+  .tab-buttons {
+    height: auto;
+    max-height: 152px;
+  }
+
+  .tablink {
+    font-size: 10px;
+    padding: 5px;
+    min-width: 80px;
+  }
+
+  /* Adjust main content margin */
+  .main-content {
+    margin-top: 182px;
+  }
+
+  /* Adjust home section */
+  #home {
+    padding: 20px 5%;
+  }
+
+  #home h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust profile image */
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust buttons */
+  .home-button, .home-button-2, .home-button-3, .home-button-4, .home-button-5 {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    width: 90%;
+  }
+
+  /* Adjust GitHub section */
+  .github-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .github-icon-big {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Adjust project cards */
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card h3 {
+    font-size: 1em;
+  }
+
+  .project-card p {
+    font-size: 0.8em;
+  }
+
+  .project-tags .tag {
+    font-size: 0.7em;
+  }
+
+  /* Adjust skills section */
+  .skills-container h2 {
+    font-size: 1.8em;
+  }
+
+  .skills-section h3 {
+    font-size: 1.4em;
+  }
+
+  .skill-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill-item span {
+    font-size: 0.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .skills-container {
+    padding-top: 20px; /* Adjust for smaller screens */
+  }
+
+  .skills-grid {
+    gap: 15px; /* Slightly smaller gap for very small screens */
+  }
+
+  .skill-item img {
+    width: 40px; /* Slightly smaller icons for very small screens */
+    height: 40px;
+  }
+
+  .skill-item span {
+    font-size: 0.8rem;
+  }
+
+  .education-section,
+  .experience-section {
+    padding: 15px;
+    margin-top: 5rem;
+    width: 98%;
+    margin-bottom: 0;
+  }
+
+  .university-heading h1,
+  .experience-heading h1 {
+    font-size: 18px;
+  }
+
+  .location {
+    font-size: 12px;
+  }
+
+  .education-bio p,
+  .experience-bio p {
+    font-size: 14px;
+  }
+
+  .graduated h2,
+  .experience-duration h2 {
+    font-size: 16px;
+  }
+
+  .skill-tag {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .education-skills,
+  .education-course,
+  .experience-skills {
+    gap: 5px;
+    margin-bottom: 15px; /* Slightly less space on very small screens */
+  }
+
+  .education-skills:last-child,
+  .education-course:last-child,
+  .experience-skills:last-child {
+    margin-bottom: 25px; /* Still extra space, but a bit less */
+  }
+
+  .experience-container {
+    margin-bottom: 25px; /* Slightly less space on very small screens */
+  }
+
+  .experience-details {
+    margin-bottom: 15px; /* Slightly less space on very small screens */
+  }
+
+  .d-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tab bar styles */
+.tab-bar {
+  position: fixed;
+  top: 0;
+  left: 40px;
+  right: 0;
+  background-color: #252526;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.tab {
+  padding: 10px 20px;
+  color: #adadad;
+  text-decoration: none;
+  border-right: 1px solid #3c3c3c;
+  font-size: 14px;
+}
+
+.tab.active {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.main-content {
+  margin-top: 40px;
+}
+
+/* Remove bottom padding and adjust top margin */
+.education-section,
+.experience-section {
+  padding-bottom: 0;
+}
+
+.education-section + *,
+.experience-section + * {
+  margin-top: 0;
+}
+
+/* Ensure the resume content is scrollable if it's too long */
+@media screen and (max-height: 800px) {
+  .resume-container {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+}

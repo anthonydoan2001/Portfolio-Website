@@ -39,6 +39,9 @@ function openFileFromTab(fileName, elmnt) {
             sidebarLinks[i].style.backgroundColor = "#333333"; // Change sidebar link background to #333333
         }
     }
+
+    // Scroll to the active tab
+    scrollToActiveTab();
 }
 
 function openFileFromSidebar(fileName, elmnt) {
@@ -74,6 +77,9 @@ function openFileFromSidebar(fileName, elmnt) {
             tablinks[i].style.backgroundColor = "#333333"; // Change tab background to #333333 for the active tab
         }
     }
+
+    // Scroll to the active tab
+    scrollToActiveTab();
 }
 
 // Button click handler for View Work and Contact Me
@@ -97,7 +103,29 @@ function handleButtonClick(targetTab) {
     }
 }
 
-  
-  
+function scrollToActiveTab() {
+  var activeTab = document.querySelector('.tablink.active');
+  if (activeTab) {
+    var tabButtons = document.querySelector('.tab-buttons');
+    var activeTabRect = activeTab.getBoundingClientRect();
+    var tabButtonsRect = tabButtons.getBoundingClientRect();
 
-document.getElementById("defaultOpen").click();
+    if (activeTabRect.left < tabButtonsRect.left || activeTabRect.right > tabButtonsRect.right) {
+      tabButtons.scrollLeft = activeTab.offsetLeft - tabButtons.offsetLeft;
+    }
+  }
+}
+
+function initializeTabs() {
+  var tabcontents = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontents.length; i++) {
+    tabcontents[i].style.display = "none";
+  }
+  document.getElementById("home.jsx").style.display = "block";
+}
+
+// Call this function after the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+  initializeTabs();
+  document.getElementById("defaultOpen").click();
+});
